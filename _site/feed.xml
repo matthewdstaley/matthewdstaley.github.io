@@ -6,16 +6,13 @@
 </description>
     <link>http://matthewdstaley.github.io/</link>
     <atom:link href="http://matthewdstaley.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 11 Jun 2015 14:09:36 -0700</pubDate>
-    <lastBuildDate>Thu, 11 Jun 2015 14:09:36 -0700</lastBuildDate>
+    <pubDate>Thu, 11 Jun 2015 14:46:31 -0700</pubDate>
+    <lastBuildDate>Thu, 11 Jun 2015 14:46:31 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Mathematics</title>
-        <description>&lt;p&gt;Check out my &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Expository Paper&lt;/a&gt; on the geometry of hyberloic geometry. This paper was part of the requirements for completing my Master of Arts in Mathematics, at San Francisco State University, CA.&lt;/p&gt;
-
-&lt;p&gt;The new line goes here&lt;/p&gt;
-
+        <description>&lt;p&gt;Check out my &lt;a href=&quot;http://matthewdstaley.github.io/assets/staley_expository.pdf&quot;&gt;Expository Paper&lt;/a&gt; on the geometry of hyperbolic geometry. This paper was part of the requirements for completing my Master of Arts in Mathematics, at San Francisco State University, CA.&lt;/p&gt;
 </description>
         <pubDate>Wed, 10 Jun 2015 18:03:32 -0700</pubDate>
         <link>http://matthewdstaley.github.io/jekyll/update/2015/06/10/welcome-to-jekyll.html</link>

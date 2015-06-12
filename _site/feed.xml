@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Matthew D. Staley</title>
-    <description>Welcome to my webpage! I have posted a few articles and documents pertaining to my lifes hobbies and interests. Enjnoy!
+    <title>Matthew Staley</title>
+    <description>&quot;When we try to pick out anything by istelf, we find it hitched to everything else in the Universe.&quot; -- John Muir
 </description>
     <link>http://matthewdstaley.github.io/</link>
     <atom:link href="http://matthewdstaley.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 11 Jun 2015 16:55:20 -0700</pubDate>
-    <lastBuildDate>Thu, 11 Jun 2015 16:55:20 -0700</lastBuildDate>
+    <pubDate>Thu, 11 Jun 2015 17:06:48 -0700</pubDate>
+    <lastBuildDate>Thu, 11 Jun 2015 17:06:48 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>

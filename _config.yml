@@ -1,8 +1,8 @@
 # Site settings
-title: Matthew D. Staley
+title: Matthew Staley
 email: staley.d.matthew@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Welcome to my webpage! I have posted a few articles and documents pertaining to my lifes hobbies and interests. Enjnoy!
+  "When we try to pick out anything by istelf, we find it hitched to everything else in the Universe." -- John Muir
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://matthewdstaley.github.io" # the base hostname & protocol for your site
 # twitter_username: jekyllrb

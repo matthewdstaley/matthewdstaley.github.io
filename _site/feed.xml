@@ -6,36 +6,9 @@
 </description>
     <link>http://matthewdstaley.github.io/</link>
     <atom:link href="http://matthewdstaley.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 29 Jun 2015 17:32:25 -0700</pubDate>
-    <lastBuildDate>Mon, 29 Jun 2015 17:32:25 -0700</lastBuildDate>
+    <pubDate>Wed, 08 Jul 2015 16:18:05 -0700</pubDate>
+    <lastBuildDate>Wed, 08 Jul 2015 16:18:05 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
-    
-      <item>
-        <title>Mathematics</title>
-        <description>&lt;p&gt;Check out my &lt;a href=&quot;/assets/staley_expository.pdf&quot;&gt;Expository Paper&lt;/a&gt; on hyperbolic geometry. This paper was part of the requirements for completing my Master of Arts in Mathematics, at San Francisco State University, CA.&lt;/p&gt;
-
-&lt;h2&gt; A few math courses that I&#39;ve taken. &lt;/h2&gt;
-
-&lt;h1 id=&quot;functional-analysis&quot;&gt;Functional Analysis&lt;/h1&gt;
-&lt;p&gt;Measure Theory and integration, L-p spaces, Closed Graph Thoerem, Baire category Theorem, Banach and Hilbert spaces. Textbook: Real Analysis, third edition, H.L. Royden.&lt;/p&gt;
-
-&lt;h1 id=&quot;categorical-data-analysis&quot;&gt;Categorical Data Analysis&lt;/h1&gt;
-&lt;p&gt;Logistic regression, Simpson’s paradox, data frames in R, binomial distribution, maximum likelihood and ratio test, hypothesis testing, Chi-squared distribution, Possion distribution.
-Textbook: Intro to CDA, Alan Agresti&lt;/p&gt;
-
-&lt;h1 id=&quot;topology&quot;&gt;Topology&lt;/h1&gt;
-&lt;p&gt;Metric and topological spaces, Axiom of choice, well-ordered sets, connected spaces, compact spaces, countability and separation, Baire spaces and the Baire category Theorem.Tetxtbook: Topology, Munkres&lt;/p&gt;
-</description>
-        <pubDate>Wed, 10 Jun 2015 18:03:32 -0700</pubDate>
-        <link>http://matthewdstaley.github.io/jekyll/update/2015/06/10/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://matthewdstaley.github.io/jekyll/update/2015/06/10/welcome-to-jekyll.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
     
       <item>
         <title>Project Euler Codes</title>
@@ -74,10 +47,57 @@ Textbook: Intro to CDA, Alan Agresti&lt;/p&gt;
 &lt;span class=&quot;err&quot;&gt;​&lt;/span&gt;
 &lt;span class=&quot;mi&quot;&gt;4613732&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;h2&gt; Problem 3 &lt;/h2&gt;
+&lt;h1&gt;What is the largest prime factor of the number 600851475143 ?&lt;/h1&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;600851475143&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;​&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;​&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;6857&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I had to get help on this one. At first I tried to compute all the divisors, then test which ones were prime. Writing a “is-prime” test did not come easy to me. But this is not necessary it turns out as the above code demonstrates.&lt;/p&gt;
+
+&lt;h2&gt;Problem 4 &lt;/h2&gt;
+&lt;h1&gt; A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+
+Find the largest palindrome made from the product of two 3-digit numbers. &lt;/h1&gt;
+</description>
+        <pubDate>Tue, 07 Jul 2015 18:03:32 -0700</pubDate>
+        <link>http://matthewdstaley.github.io/jekyll/update/2015/07/07/projecteuler.html</link>
+        <guid isPermaLink="true">http://matthewdstaley.github.io/jekyll/update/2015/07/07/projecteuler.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Mathematics</title>
+        <description>&lt;p&gt;Check out my &lt;a href=&quot;/assets/staley_expository.pdf&quot;&gt;Expository Paper&lt;/a&gt; on hyperbolic geometry. This paper was part of the requirements for completing my Master of Arts in Mathematics, at San Francisco State University, CA.&lt;/p&gt;
+
+&lt;h2&gt; A few math courses that I&#39;ve taken. &lt;/h2&gt;
+
+&lt;h1 id=&quot;functional-analysis&quot;&gt;Functional Analysis&lt;/h1&gt;
+&lt;p&gt;Measure Theory and integration, L-p spaces, Closed Graph Thoerem, Baire category Theorem, Banach and Hilbert spaces. Textbook: Real Analysis, third edition, H.L. Royden.&lt;/p&gt;
+
+&lt;h1 id=&quot;categorical-data-analysis&quot;&gt;Categorical Data Analysis&lt;/h1&gt;
+&lt;p&gt;Logistic regression, Simpson’s paradox, data frames in R, binomial distribution, maximum likelihood and ratio test, hypothesis testing, Chi-squared distribution, Possion distribution.
+Textbook: Intro to CDA, Alan Agresti&lt;/p&gt;
+
+&lt;h1 id=&quot;topology&quot;&gt;Topology&lt;/h1&gt;
+&lt;p&gt;Metric and topological spaces, Axiom of choice, well-ordered sets, connected spaces, compact spaces, countability and separation, Baire spaces and the Baire category Theorem.Tetxtbook: Topology, Munkres&lt;/p&gt;
 </description>
         <pubDate>Wed, 10 Jun 2015 18:03:32 -0700</pubDate>
-        <link>http://matthewdstaley.github.io/jekyll/update/2015/06/10/projecteuler.html</link>
-        <guid isPermaLink="true">http://matthewdstaley.github.io/jekyll/update/2015/06/10/projecteuler.html</guid>
+        <link>http://matthewdstaley.github.io/jekyll/update/2015/06/10/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://matthewdstaley.github.io/jekyll/update/2015/06/10/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>

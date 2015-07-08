@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Project Euler Codes"
-date:   2015-06-11 01:03:32
+date:   2015-07-08 01:03:32
 categories: jekyll update
 ---
 
@@ -64,6 +64,8 @@ while i*i < n:
 print(n)
 6857.0
 {% endhighlight %}
+
+I had to get help on this one. At first I tried to compute all the divisors, then test which ones were prime. Writing a "is-prime" test did not come easy to me. But this is not necessary it turns out as the above code demonstrates.
 
 
 <h2>Problem 4 </h2>

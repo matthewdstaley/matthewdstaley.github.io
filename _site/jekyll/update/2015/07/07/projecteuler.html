@@ -10,7 +10,7 @@
   <meta name="description" content="With my background in math, and recently learning to code in python, projecteuler.net has been a great way for me to do math in a modern way. My user name is...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://matthewdstaley.github.io/jekyll/update/2015/06/10/projecteuler.html">
+  <link rel="canonical" href="http://matthewdstaley.github.io/jekyll/update/2015/07/07/projecteuler.html">
   <link rel="alternate" type="application/rss+xml" title="a brief history of matthew" href="http://matthewdstaley.github.io/feed.xml" />
 </head>
 
@@ -58,7 +58,7 @@
 
   <header class="post-header">
     <h1 class="post-title">Project Euler Codes</h1>
-    <p class="post-meta">Jun 10, 2015</p>
+    <p class="post-meta">Jul 7, 2015</p>
   </header>
 
   <article class="post-content">
@@ -97,6 +97,26 @@
 <span class="err">​</span>
 <span class="mi">4613732</span></code></pre></div>
 
+<h2> Problem 3 </h2>
+<h1>What is the largest prime factor of the number 600851475143 ?</h1>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">n</span> <span class="o">=</span> <span class="mi">600851475143</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="err">​</span>
+<span class="k">while</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span> <span class="o">&lt;</span> <span class="ss">n</span><span class="p">:</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">/</span><span class="n">i</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+<span class="err">​</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="mi">6857</span><span class="o">.</span><span class="mi">0</span></code></pre></div>
+
+<p>I had to get help on this one. At first I tried to compute all the divisors, then test which ones were prime. Writing a “is-prime” test did not come easy to me. But this is not necessary it turns out as the above code demonstrates.</p>
+
+<h2>Problem 4 </h2>
+<h1> A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+
+Find the largest palindrome made from the product of two 3-digit numbers. </h1>
 
   </article>
 

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mushrooms of Madagascar</title>
+  <meta name="description" content="“Mushrooms of Madagascar” is a master’s thesis project by Jackie Shay, at San Francisco State University. She has traveled to Madagascar and collected data o...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://matthewdstaley.github.io/jekyll/update/2015/08/25/mushrooms-of-madagascar.html">
+  <link rel="alternate" type="application/rss+xml" title="a brief history of matthew" href="http://matthewdstaley.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">a brief history of matthew</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About Me</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Mushrooms of Madagascar</h1>
+    <p class="post-meta">Aug 25, 2015</p>
+  </header>
+
+  <article class="post-content">
+    <p>“Mushrooms of Madagascar” is a master’s thesis project by Jackie Shay, at San Francisco State University. She has traveled to Madagascar and collected data on the fungal biodiversity found there in the rainforests. You can read more about at her blog, <a href="http://jackieshay.weebly.com/">http://jackieshay.weebly.com/</a></p>
+
+<p>I helped create a data visualization map of GPS coordinate locations of the collection sites she visited. The code below to produce such a map is written below using R-Studio.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&quot;dismo&quot;</span><span class="p">,</span> <span class="s2">&quot;rgdal&quot;</span><span class="p">,</span> <span class="s2">&quot;XML&quot;</span><span class="p">,</span> <span class="s2">&quot;sp&quot;</span><span class="p">,</span> <span class="s2">&quot;raster&quot;</span><span class="p">,</span> <span class="s2">&quot;maptools&quot;</span><span class="p">,</span> <span class="s2">&quot;rgeos&quot;</span><span class="p">,</span> <span class="s2">&quot;RgoogleMaps&quot;</span><span class="p">)</span>
+
+<span class="n">library</span><span class="p">(</span><span class="no">RgoogleMaps</span><span class="p">,</span> <span class="n">rgeos</span><span class="p">,</span> <span class="n">maptools</span><span class="p">,</span> <span class="n">raster</span><span class="p">,</span> <span class="n">sp</span><span class="p">,</span> <span class="n">dismo</span><span class="p">,</span> <span class="n">rgdal</span><span class="p">,</span> <span class="no">XML</span><span class="p">)</span>
+
+<span class="no">LatCord</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="o">-</span><span class="mi">21</span><span class="o">.</span><span class="mi">15237</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">21</span><span class="o">.</span><span class="mi">15440</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">21</span><span class="o">.</span><span class="mi">14255</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">21</span><span class="o">.</span><span class="mi">15413</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">18</span><span class="o">.</span><span class="mi">55422</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">18</span><span class="o">.</span><span class="mi">53231</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">18</span><span class="o">.</span><span class="mi">53082</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">18</span><span class="o">.</span><span class="mi">55530</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">18</span><span class="o">.</span><span class="mi">11504</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">19</span><span class="o">.</span><span class="mo">0032</span><span class="mi">8</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">17</span><span class="o">.</span><span class="mi">38242</span><span class="p">,</span>
+            <span class="o">-</span><span class="mi">19</span><span class="o">.</span><span class="mo">01444</span><span class="p">)</span>
+
+<span class="no">LonCord</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">47</span><span class="o">.</span><span class="mi">25183</span><span class="p">,</span>
+            <span class="mi">47</span><span class="o">.</span><span class="mi">25116</span><span class="p">,</span>
+            <span class="mi">47</span><span class="o">.</span><span class="mi">23409</span><span class="p">,</span>
+            <span class="mi">47</span><span class="o">.</span><span class="mi">25253</span><span class="p">,</span>
+            <span class="mi">48</span><span class="o">.</span><span class="mi">30201</span><span class="p">,</span>
+            <span class="mi">49</span><span class="o">.</span><span class="mo">074</span><span class="mi">90</span><span class="p">,</span>
+            <span class="mi">49</span><span class="o">.</span><span class="mo">0755</span><span class="mi">9</span><span class="p">,</span>
+            <span class="mi">47</span><span class="o">.</span><span class="mi">31350</span><span class="p">,</span>
+            <span class="mi">47</span><span class="o">.</span><span class="mi">17074</span><span class="p">,</span>
+            <span class="mi">47</span><span class="o">.</span><span class="mi">08300</span><span class="p">,</span>
+            <span class="mi">49</span><span class="o">.</span><span class="mi">29103</span><span class="p">,</span>
+            <span class="mi">47</span><span class="o">.</span><span class="mi">101852</span><span class="p">)</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="no">LatCord</span><span class="p">),</span> <span class="n">mean</span><span class="p">(</span><span class="no">LonCord</span><span class="p">))</span>
+
+<span class="n">map</span><span class="o">.</span><span class="n">mada</span> <span class="o">=</span> <span class="no">GetMap</span><span class="p">(</span><span class="n">center</span> <span class="o">=</span> <span class="n">c</span><span class="p">,</span>
+                  <span class="n">zoom</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+                  <span class="n">size</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">640</span><span class="p">),</span>
+                  <span class="no">SCALE</span> <span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                  <span class="no">GRAYSCALE</span> <span class="o">=</span> <span class="no">FALSE</span><span class="p">,</span>
+                  <span class="n">maptype</span> <span class="o">=</span> <span class="s2">&quot;terrain&quot;</span><span class="p">)</span>
+
+<span class="no">PlotOnStaticMap</span><span class="p">(</span><span class="n">map</span><span class="o">.</span><span class="n">mada</span><span class="p">,</span>
+                <span class="n">lat</span> <span class="o">=</span> <span class="no">LatCord</span><span class="p">,</span>
+                <span class="n">lon</span> <span class="o">=</span> <span class="no">LonCord</span><span class="p">,</span>
+                <span class="n">zoom</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="n">cex</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="n">pch</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+                <span class="n">col</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">rep</span><span class="p">(</span><span class="s2">&quot;maroon3&quot;</span><span class="p">,</span>
+                            <span class="n">length</span><span class="p">(</span><span class="no">LonCord</span><span class="p">)</span><span class="o">-</span><span class="mi">3</span><span class="p">),</span>
+                            <span class="n">rep</span><span class="p">(</span><span class="s2">&quot;olivedrab&quot;</span><span class="p">,</span><span class="mi">3</span> <span class="p">)),</span>
+                <span class="no">FUN</span> <span class="o">=</span> <span class="n">points</span><span class="p">,</span> <span class="n">add</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+
+<span class="n">legend</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">110</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Sample Sites&quot;</span><span class="p">,</span>
+       <span class="n">legend</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;2014&quot;</span><span class="p">,</span> <span class="s2">&quot;2006&quot;</span><span class="p">),</span>
+       <span class="n">x</span><span class="o">.</span><span class="n">intersp</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+       <span class="n">y</span><span class="o">.</span><span class="n">intersp</span> <span class="o">=</span> <span class="o">.</span><span class="mi">6</span><span class="p">,</span>
+       <span class="n">cex</span> <span class="o">=</span> <span class="mi">1</span><span class="o">.</span><span class="mi">3</span><span class="p">,</span>
+       <span class="n">pch</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+       <span class="n">pt</span><span class="o">.</span><span class="n">cex</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+       <span class="n">col</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;maroon3&quot;</span><span class="p">,</span> <span class="s2">&quot;olivedrab&quot;</span><span class="p">))</span>
+
+<span class="n">text</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">120</span><span class="p">,</span> <span class="n">y</span><span class="o">=-</span><span class="mi">313</span><span class="p">,</span> <span class="n">cex</span> <span class="o">=</span> <span class="mi">0</span><span class="o">.</span><span class="mi">75</span><span class="p">,</span>
+     <span class="n">labels</span> <span class="o">=</span> <span class="s2">&quot;Map produced by M.D.Staley&quot;</span><span class="p">)</span></code></pre></div>
+
+<p><a href="http://matthewdstaley.github.io">Return Home</a></p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Contact</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>email</li>
+          <li><a href="mailto:staley.d.matthew@gmail.com">staley.d.matthew@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/matthewdstaley">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">matthewdstaley</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">"When we try to pick out anything by istelf, we find it hitched to everything else in the Universe." -- John Muir
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

@@ -4,28 +4,16 @@ title:  "Mushrooms of Madagascar"
 date:   2015-08-25 10:03:32
 categories: jekyll update
 ---
-"Mushrooms of Madagascar" is a master's thesis project at San Francisco State University. She has traveled to Madagascar and collected data on the fungal biodiversity found there in the rainforests. You can read more about at her blog, [http://jackieshay.weebly.com/][http://jackieshay.weebly.com/].
+"Mushrooms of Madagascar" is a master's thesis project by Jackie Shay, at San Francisco State University. She has traveled to Madagascar and collected data on the fungal biodiversity found there in the rainforests. You can read more about at her blog, [http://jackieshay.weebly.com/](http://jackieshay.weebly.com/)
 
 I helped create a data visualization map of GPS coordinate locations of the collection sites she visited. The code below to produce such a map is written below using R-Studio.
 
-{% highlight ruby %}
-install.packages("dismo")
-install.packages("rgdal")
-install.packages("XML")
-install.packages("sp")
-install.packages("raster")
-install.packages("maptools")
-install.packages("rgeos")
-install.packages("RgoogleMaps")
+(https://cloud.githubusercontent.com/assets/11449940/9486189/b53b9ef2-4b78-11e5-879b-134acd6e635e.png0)
 
-library(RgoogleMaps)
-library(rgeos)
-library(maptools)
-library(raster)
-library(sp)
-library(dismo)
-library(rgdal)
-library(XML)
+{% highlight ruby %}
+install.packages("dismo", "rgdal", "XML", "sp", "raster", "maptools", "rgeos", "RgoogleMaps")
+
+library(RgoogleMaps, rgeos, maptools, raster, sp, dismo, rgdal, XML)
 
 LatCord = c(-21.15237,
             -21.15440,
@@ -55,7 +43,6 @@ LonCord = c(47.25183,
 
 c = c(mean(LatCord), mean(LonCord))
 
-
 map.mada = GetMap(center = c,
                   zoom = 6,
                   size = c(640,640),
@@ -81,7 +68,9 @@ legend(x = 110, y = -100, title = "Sample Sites",
        pch = 20,
        pt.cex = 3,
        col = c("maroon3", "olivedrab"))
+
 text(x = 120, y=-313, cex = 0.75,
      labels = "Map produced by M.D.Staley")
-
 {% endhighlight %}
+
+[Return Home](http://matthewdstaley.github.io)

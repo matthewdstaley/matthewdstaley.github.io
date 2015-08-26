@@ -8,7 +8,7 @@ categories: jekyll update
 
 I helped create a data visualization map of GPS coordinate locations of the collection sites she visited. The code below to produce such a map is written below using R-Studio.
 
-(https://cloud.githubusercontent.com/assets/11449940/9486189/b53b9ef2-4b78-11e5-879b-134acd6e635e.png0)
+![Madagascar]( /assets/madagascar.png)
 
 {% highlight ruby %}
 install.packages("dismo", "rgdal", "XML", "sp", "raster", "maptools", "rgeos", "RgoogleMaps")

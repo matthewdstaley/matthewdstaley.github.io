@@ -6,8 +6,8 @@
 </description>
     <link>http://matthewdstaley.github.io/</link>
     <atom:link href="http://matthewdstaley.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 25 Aug 2015 22:16:50 -0700</pubDate>
-    <lastBuildDate>Tue, 25 Aug 2015 22:16:50 -0700</lastBuildDate>
+    <pubDate>Tue, 25 Aug 2015 22:47:46 -0700</pubDate>
+    <lastBuildDate>Tue, 25 Aug 2015 22:47:46 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -15,6 +15,8 @@
         <description>&lt;p&gt;“Mushrooms of Madagascar” is a master’s thesis project by Jackie Shay, at San Francisco State University. She has traveled to Madagascar and collected data on the fungal biodiversity found there in the rainforests. You can read more about at her blog, &lt;a href=&quot;http://jackieshay.weebly.com/&quot;&gt;http://jackieshay.weebly.com/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I helped create a data visualization map of GPS coordinate locations of the collection sites she visited. The code below to produce such a map is written below using R-Studio.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/madagascar.png&quot; alt=&quot;Madagascar&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;dismo&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;rgdal&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;XML&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;sp&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;raster&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;maptools&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;rgeos&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;RgoogleMaps&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 

@@ -4,7 +4,7 @@ title:  "Mushrooms of Madagascar"
 date:   2015-08-25 10:03:32
 categories: jekyll update
 ---
-"Mushrooms of Madagascar" is a master's thesis project by Jackie Shay, at San Francisco State University. She has traveled to Madagascar and collected data on the fungal biodiversity found there in the rainforests. You can read more about at her blog, [http://jackieshay.weebly.com/](http://jackieshay.weebly.com/)
+"Mushrooms of Madagascar" is a master's thesis project by Jackie Shay, at San Francisco State University. She has traveled to Madagascar and collected data on the fungal biodiversity found there in the rainforests. You can read more about at her page at [Research Gate](http://www.researchgate.net/publication/281123441_A_preliminary_monograph_of_Marasmius_%28Basidiomycota_Agaricales%29_from_Madagascar)
 
 I helped create a data visualization map of GPS coordinate locations of the collection sites she visited. The code below to produce such a map is written below using R-Studio.
 
